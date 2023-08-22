@@ -15,7 +15,7 @@ function FeaturedProducts({ type }) {
     },
     {
       id: 2,
-      img: "https://m.media-amazon.com/images/I/61n4DmCEzvL._UY741_.jpg",
+      img:"https://m.media-amazon.com/images/I/61n4DmCEzvL._UY741_.jpg" ,
       img2: "https://m.media-amazon.com/images/I/71Z9fNLQ55L._UY741_.jpg",
       title: "Cotton Hooded Cardigan",
       isNew: true,

@@ -28,8 +28,8 @@ function Slider() {
   return (
     <div className="slider">
       <div className="container" style={{transform: `translateX(-${currSlide *100}vw)`}}>
-        {imageData.map((item) => (
-          <img src={item} alt="" />
+        {imageData.map((item ,index) => (
+          <img src={item} alt="" key={index}/>
         ))}
       </div>
       <div className="icons">
