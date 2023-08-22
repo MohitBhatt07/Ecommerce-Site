@@ -9,7 +9,7 @@ function Contact() {
   return (
     <div className='contact'>
       <div className="wrapper">
-        <span>Be with us</span>
+        <span>Be in touch with us</span>
         <div className="mail">
           <input type= 'email' placeholder='Enter your email'/>
           <button>Join us</button>
