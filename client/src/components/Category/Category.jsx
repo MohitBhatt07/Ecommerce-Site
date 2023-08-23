@@ -10,7 +10,7 @@ function Category() {
             src="https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=434&q=80"
             alt=""
           />
-            <Link to={"/products/p1"} className="link">
+            <Link to={"/products/1"} className="link">
           <button>
               WOMEN
           </button>
@@ -21,7 +21,7 @@ function Category() {
             src="https://images.unsplash.com/photo-1578681994506-b8f463449011?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80"
             alt=""
           />
-            <Link to={"/products/p1"} className="link">
+            <Link to={"/products/1"} className="link">
           <button>
               MEN
           </button>
@@ -34,7 +34,7 @@ function Category() {
             src="https://images.unsplash.com/photo-1604272490759-7c465473958a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
             alt=""
           />
-            <Link to={"/products/p1"} className="link">
+            <Link to={"/products/1"} className="link">
           <button>
               sales
           </button>
@@ -49,7 +49,7 @@ function Category() {
                 src="https://images.unsplash.com/photo-1544276695-78ee85a81e64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=413&q=80"
                 alt=""
               />
-              <Link to={"/products/p1"} className="link">
+              <Link to={"/products/1"} className="link">
               <button>
                   Accessories
               </button>
@@ -62,7 +62,7 @@ function Category() {
                 src="https://images.unsplash.com/photo-1572969565371-acc5b2b3496a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
                 alt=""
               />
-              <Link to={"/products/p1"} className="link">
+              <Link to={"/products/1"} className="link">
                 <button>Shoes</button>
               </Link>
             </div>
@@ -74,7 +74,7 @@ function Category() {
             alt=""
           />
 
-          <Link to={"/products/p1"} className="link">
+          <Link to={"/products/1"} className="link">
             <button>KIDS</button>
           </Link>
         </div>

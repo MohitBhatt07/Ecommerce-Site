@@ -1,7 +1,13 @@
 import React, { useState } from "react";
+import './Products.scss';
+import List from "./List";
+import { useParams } from "react-router-dom";
 
 const Products = () => {
+
   const [filterRange, setFilterRange] = useState(1000);
+  const [sort , setSort] = useState(null);
+  const catId = useParams();   
 
   return (
     <div className="products">
@@ -42,16 +48,19 @@ const Products = () => {
         <div className="filterItem">
           <h2>Sort by</h2>
           <div className="inputItem">
-            <input type="radio" value="asc" id="asc" name="price" />
+            <input type="radio" value="asc" id="asc" name="price" onChange={()=>setSort('asc')}/>
             <label htmlFor="asc">Price  (LowestFirst)</label>
           </div>
           <div className="inputItem">
-            <input type="radio" value="desc" id="desc" name="price" />
+            <input type="radio" value="desc" id="desc" name="price"  onChange={()=>setSort('desc')}/>
             <label htmlFor="desc">Price  (HighestFirst)</label>
           </div>
         </div>
       </div>
-      <div className="right"></div>
+      <div className="right">
+        <img className="categoryImg" src="https://img.freepik.com/premium-photo/happy-women-with-shopping-bags_661495-20327.jpg?w=826" alt=""/>
+        <List sort={sort} id={catId} maxPrice={filterRange}/>
+      </div>
     </div>
   );
 };
