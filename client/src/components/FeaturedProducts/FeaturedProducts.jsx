@@ -40,6 +40,7 @@ function FeaturedProducts({ type }) {
       oldPrice: 1399,
       price: 750,
     },
+    
   ];
   return (
     <div className="featuredProducts">
@@ -57,7 +58,7 @@ function FeaturedProducts({ type }) {
 
       <div className="bottom">
         {data.map((item) => (
-          <Card key={item.id} item={item} />
+          <Card key={item.id} item={item} className='myCard'/>
         ))}
       </div>
     </div>

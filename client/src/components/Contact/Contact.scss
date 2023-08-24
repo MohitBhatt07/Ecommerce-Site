@@ -1,6 +1,7 @@
 .contact {
-  width: 100vw;
-  background-color: rgb(190, 12, 176);
+  padding: 5px 20px;
+  width: 97%;
+  background-color: rgb(126, 33, 233);
   height: 70px;
   display: flex;
   gap: 20px;
@@ -10,9 +11,9 @@
  
   .wrapper {   
     display: flex;
-    gap: 40px;
+    gap: 20px;
     height: 40px;
-   
+    flex: 3;
     align-items: center;
     justify-content: space-between;
     span{
@@ -40,6 +41,7 @@
   }
 
   .icons {
+    flex: 1;
     object-fit: contain;
     height: 60px;
     

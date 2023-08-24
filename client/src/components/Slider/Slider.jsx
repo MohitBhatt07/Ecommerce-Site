@@ -9,21 +9,17 @@ const imageData = [
   "https://img.freepik.com/premium-photo/fashion-friends-girls-bright-clothes-stand-bright-purpleviolet-colored-background_76964-25670.jpg?w=996",
 ];
 function Slider() {
-  const [currSlide,setCurrSlide] = useState(0);
+  const [currSlide, setCurrSlide] = useState(0);
 
-  const prevSlide = ()=>{
-    if(currSlide>=1)
-      setCurrSlide((prev) =>prev-1);
-    else
-      setCurrSlide(3);
-  }
+  const prevSlide = () => {
+    if (currSlide >= 1) setCurrSlide((prev) => prev - 1);
+    else setCurrSlide(3);
+  };
 
-  const nextSlide = ()=>{
-    if(currSlide === 3)
-      setCurrSlide(0);
-    else
-      setCurrSlide((prev) =>prev+1);
-  }
+  const nextSlide = () => {
+    if (currSlide === 3) setCurrSlide(0);
+    else setCurrSlide((prev) => prev + 1);
+  };
 
   return (
     <div className="slider">
@@ -37,6 +33,17 @@ function Slider() {
         <div className="icon" onClick = {nextSlide}><FaChevronCircleRight size={50}/></div>
       </div>
     </div>
+
+    // <div className="slider" style={{width: "98vw" ,height:'400px'}}>
+    //   <div className="container" style={{width: "100%",height :'100%',backgroundSize:"cover" ,backgroundPosition:'center',backgroundImage : `url(${imageData[currSlide]})`}}>
+        
+    //   </div>
+    //   <div className="icons">
+    //     <div className="icon" onClick={prevSlide}><FaChevronCircleLeft size={50}/></div>
+    //     <div className="icon" onClick = {nextSlide}><FaChevronCircleRight size={50}/></div>
+    //   </div>
+    // </div>
+  
   );
 }
 
