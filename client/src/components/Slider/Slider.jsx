@@ -22,18 +22,18 @@ function Slider() {
   };
 
   return (
-    <div className="slider">
-      <div className="container" style={{transform: `translateX(-${currSlide *100}vw)`}}>
-        {imageData.map((item ,index) => (
-          <img src={item} alt="" key={index}/>
-        ))}
-      </div>
-      <div className="icons">
-        <div className="icon" onClick={prevSlide}><FaChevronCircleLeft size={50}/></div>
-        <div className="icon" onClick = {nextSlide}><FaChevronCircleRight size={50}/></div>
-      </div>
-    </div>
-
+    // <div className="slider">
+    //   <div className="container" style={{transform: `translateX(-${currSlide *100}vw)`}}>
+    //     {imageData.map((item ,index) => (
+    //       <img src={item} alt="" key={index}/>
+    //     ))}
+    //   </div>
+    //   <div className="icons">
+    //     <div className="icon" onClick={prevSlide}><FaChevronCircleLeft size={50}/></div>
+    //     <div className="icon" onClick = {nextSlide}><FaChevronCircleRight size={50}/></div>
+    //   </div>
+    // </div>
+  <div>slider</div>
     // <div className="slider" style={{width: "98vw" ,height:'400px'}}>
     //   <div className="container" style={{width: "100%",height :'100%',backgroundSize:"cover" ,backgroundPosition:'center',backgroundImage : `url(${imageData[currSlide]})`}}>
         

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { HiSearch } from "react-icons/hi";
 import { BsCart3 } from "react-icons/bs";
@@ -6,10 +6,13 @@ import { FaRegHeart } from "react-icons/fa";
 import { HiOutlineUserCircle } from "react-icons/hi";
 import "./NavBar.scss";
 import { Link } from "react-router-dom";
+import Cart from "../Cart/Cart";
 
 function NavBar() {
+  const [openCart,setOpenCart] =useState(false);
+
   return (
-    <div className="navbar">
+    <nav className="navbar">
       <div className="wrapper">
         <div className="left">
           <div className="item">
@@ -51,14 +54,15 @@ function NavBar() {
             <HiSearch />
             <HiOutlineUserCircle />
             <FaRegHeart />
-            <div className="cart-icon">
+            <div className="cart-icon" onClick={()=>setOpenCart(!openCart)}>
               <BsCart3 />
               <span>0</span>
             </div>
           </div>
         </div>
       </div>
-    </div>
+      {openCart && <Cart/>}
+    </nav >
   );
 }
 

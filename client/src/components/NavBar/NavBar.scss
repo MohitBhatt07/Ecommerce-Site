@@ -1,11 +1,21 @@
 .navbar{
-  height: 80px;
-
+  height: 60px;
+  position: sticky;
+  top: 1px;
+  width: 100%;
+  min-width: fit-content;
+  z-index: 800;
+  background-color: rgb(89, 11, 153);
+  box-shadow: 2px 2px 10px 2px purple;
   .wrapper{
+    background-color: rgba(112, 51, 153);
+    height: 80%;
     padding: 10px 30px;
     display: flex;
     justify-content: space-between;
-
+    font-size: 20px;
+    color: white;
+    font-weight: 400;
     .item{
       display: flex; 
       align-items: center;

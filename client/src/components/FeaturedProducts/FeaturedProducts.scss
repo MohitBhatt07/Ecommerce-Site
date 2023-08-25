@@ -1,12 +1,13 @@
 .featuredProducts{
   margin : 100px 10px;
-  
+  width: 100%;
   .top{
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 50px;
-    gap: 20px;
+    gap: 30px;
   }
   h1{
     flex: 2;
@@ -14,6 +15,8 @@
   }
   p{
     flex: 3;
+    width: 300px;
+    object-fit: cover;
     color: grey;
 
   }

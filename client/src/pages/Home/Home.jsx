@@ -6,7 +6,7 @@ import Category from "../../components/Category/Category";
 import Contact from "../../components/Contact/Contact";
 
 const HomePage = ()=>{
-  return <div>
+  return <div className="home" >
     <Slider/>
     <FeaturedProducts type= 'featured'/>
     <Category/>
