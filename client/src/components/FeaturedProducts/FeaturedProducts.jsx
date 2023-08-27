@@ -42,6 +42,9 @@ function FeaturedProducts({ type }) {
     },
     
   ];
+  const [products,setProducts]= useState([]);
+
+  
   return (
     <div className="featuredProducts">
       <div className="top">
