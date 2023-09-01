@@ -1,17 +1,6 @@
 .MainLayout{
   width: 100%;
-  &::-webkit-scrollbar-track {
-    background: #ff9b9b;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: #d62424;
-    border-radius: 5px;
-  }
-
-  &::-webkit-scrollbar-thumb:hover {
-    background: #f84b4b;
-  }
+ 
   .link{
     color: inherit;
     text-decoration: none;
