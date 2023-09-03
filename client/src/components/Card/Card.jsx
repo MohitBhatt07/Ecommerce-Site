@@ -8,7 +8,7 @@ function  Card({item}) {
         <div className = 'image'>
           {item.isNew && <span>New Season</span>}
           <img src = {process.env.REACT_APP_UPLOAD_URL + item.img.data.attributes.url} className='main-image' alt=''></img>
-          <img src = {process.env.REACT_APP_UPLOAD_URL +item.img2.data.attributes.url } className='second-image' alt=''/>
+          <img src = {process.env.REACT_APP_UPLOAD_URL +item.img2?.data.attributes.url } className='second-image' alt=''/>
         </div>
         <h2>{item.title}</h2>
         <div className='prices'>

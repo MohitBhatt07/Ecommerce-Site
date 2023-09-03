@@ -2,36 +2,39 @@ import React, { useState } from "react";
 import './Products.scss';
 import List from "./List";
 import { useParams } from "react-router-dom";
+import useFetch from "../../hooks/useFetch";
 
 const Products = () => {
 
   const [filterRange, setFilterRange] = useState(1000);
   const [sort , setSort] = useState(null);
-  const catId = useParams();   
+  const catId = parseInt(useParams().id);   
+  const [filterList ,setFilterList] = useState([]);
+  const {data}  = useFetch(`/sub-categories? [filters][categories][id][$eq]=${catId}`);
 
+
+  const filterListHandler = (event)=>{
+    const value = event.target.value;
+    const isChecked = event.target.checked;
+
+    setFilterList(isChecked ?[...filterList,value] : filterList.filter((item)=> item !== value));
+    
+  }
+  
   return (
     <div className="products">
       <div className="left">
         <div className="filterItem">
           <h2>Products categories</h2>
-          <div className="inputItem">
-            <input type="checkbox" id="1" />
-            <label for="1">hat</label>
-          </div>
-          <div className="inputItem">
-            <input type="checkbox" id="2" />
-            <label for="2">shoes</label>
-          </div>
-          <div className="inputItem">
-            <input type="checkbox" id="3" />
-            <label for="3">shirts</label>
-          </div>
-          <div className="inputItem">
-            <input type="checkbox" id="4" />
-            <label htmlFor="4">T-shirts</label>
-          </div>
+          {
+            data?.map((item)=>(
+              <div className="inputItem" key={item.id}>
+                <input type="checkbox" id={item.id} value={item.id} onChange={filterListHandler}/>
+                <label htmlFor={item.id}>{item.attributes.title}</label>
+              </div>
+            ))
+          }
         </div>
-
         <div className="filterItem">
           <h2>Filter by price</h2>
           <div className="inputItem">
@@ -59,7 +62,7 @@ const Products = () => {
       </div>
       <div className="right">
         <img className="categoryImg" src="https://img.freepik.com/premium-photo/happy-women-with-shopping-bags_661495-20327.jpg?w=826" alt=""/>
-        <List sort={sort} id={catId} maxPrice={filterRange}/>
+        <List sort={sort} catId={catId} maxPrice={filterRange} selectedCatgory={filterList}/>
       </div>
     </div>
   );
