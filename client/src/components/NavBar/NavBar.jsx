@@ -7,10 +7,11 @@ import { HiOutlineUserCircle } from "react-icons/hi";
 import "./NavBar.scss";
 import { Link } from "react-router-dom";
 import Cart from "../Cart/Cart";
+import { useSelector } from "react-redux";
 
 function NavBar() {
   const [openCart,setOpenCart] =useState(false);
-
+  const totalQuantity = useSelector(state => state.cart.totalQuantity);
   return (
     <nav className="navbar">
       <div className="wrapper">
@@ -24,13 +25,13 @@ function NavBar() {
             <IoIosArrowDown />
           </div>
           <div className="item">
-            <Link  className='link' to={"/products/men"}>Men</Link>
+            <Link  className='link' to={"/products/2"}>Men</Link>
           </div>
           <div className="item">
-            <Link className='link'  to={"/products/women"}>Women</Link>
+            <Link className='link'  to={"/products/1"}>Women</Link>
           </div>
           <div className="item">
-            <Link className='link'  to={"/products/children"}>Children</Link>
+            <Link className='link'  to={"/products/3"}>Children</Link>
           </div>
           <Link to={"/"} className="link">Accessories</Link>
         </div>
@@ -56,7 +57,7 @@ function NavBar() {
             <FaRegHeart />
             <div className="cart-icon" onClick={()=>setOpenCart(!openCart)}>
               <BsCart3 />
-              <span>0</span>
+              <span>{totalQuantity}</span>
             </div>
           </div>
         </div>

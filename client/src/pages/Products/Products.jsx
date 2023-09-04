@@ -7,7 +7,7 @@ import useFetch from "../../hooks/useFetch";
 const Products = () => {
 
   const [filterRange, setFilterRange] = useState(1000);
-  const [sort , setSort] = useState(null);
+  const [sort , setSort] = useState("asc");
   const catId = parseInt(useParams().id);   
   const [filterList ,setFilterList] = useState([]);
   const {data}  = useFetch(`/sub-categories? [filters][categories][id][$eq]=${catId}`);
@@ -20,7 +20,7 @@ const Products = () => {
     setFilterList(isChecked ?[...filterList,value] : filterList.filter((item)=> item !== value));
     
   }
-  
+
   return (
     <div className="products">
       <div className="left">
@@ -51,7 +51,7 @@ const Products = () => {
         <div className="filterItem">
           <h2>Sort by</h2>
           <div className="inputItem">
-            <input type="radio" value="asc" id="asc" name="price" onChange={()=>setSort('asc')}/>
+            <input type="radio" value="asc" id="asc" name="price" defaultChecked onChange={()=>setSort('asc')}/>
             <label htmlFor="asc">Price  (LowestFirst)</label>
           </div>
           <div className="inputItem">
@@ -62,7 +62,7 @@ const Products = () => {
       </div>
       <div className="right">
         <img className="categoryImg" src="https://img.freepik.com/premium-photo/happy-women-with-shopping-bags_661495-20327.jpg?w=826" alt=""/>
-        <List sort={sort} catId={catId} maxPrice={filterRange} selectedCatgory={filterList}/>
+        <List sort={sort} catId={catId} maxPrice={filterRange} selectedCategory={filterList}/>
       </div>
     </div>
   );

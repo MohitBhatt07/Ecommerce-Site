@@ -4,17 +4,16 @@ import "./List.scss";
 import useFetch from "../../hooks/useFetch";
 
 function List({ sort, catId, maxPrice, selectedCategory }) {
-  console.log(typeof(catId));
-  const { data, isLoading,error } = useFetch(
+  const { data, isLoading } = useFetch(
     `/products?populate=*&[filters][categories][id]=${catId}${selectedCategory?.map(
-      (item) =>`&[filters][sub_categories][id][$eq]=${item}`
-    )}`
+      (item) =>`&[filters][sub_categories][id][$eq]=${item}`)}&[filters][price][$lte]=${maxPrice}&sort=price:${sort}`,
   );
+  
   return (
     <div className="list">
       {isLoading
         ? "Loading data...."
-        : data?.map((item) => <Card item={item.attributes} key={item.id} />)}
+        : data?.map((item) => <Card item={item} key={item.id} />)} 
     </div>
   );
 }

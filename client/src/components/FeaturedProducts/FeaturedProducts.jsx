@@ -62,7 +62,7 @@ function FeaturedProducts({ type }) {
         {isLoading && <p> Loading....</p>}
         {error && <p>{error}</p>}
         {data?.map((item) => (
-          <Card key={item.id} item={item.attributes} className='myCard'/>
+          <Card key={item.id} item={item} className='myCard'/>
         ))}
       </div>
     </div>
