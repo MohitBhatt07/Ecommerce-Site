@@ -4,6 +4,7 @@ import "./Cart.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { removeFromCart, resetCart } from "../../redux/cartReducer";
 import { makeRequest } from "../../makeReq";
+import { loadStripe } from "@stripe/stripe-js";
 
 function Cart() {
   const data = useSelector((state) => state.cart.products);
@@ -17,9 +18,12 @@ function Cart() {
 
   const handlePayment = async() => {
     try {
-      const stripe = await makeRequest.post("/orders",{
-        products
+      const stripe = await stripePromise;
+      
+      const res = await makeRequest.post("/orders",{
+        data
       });
+      
       await stripe.redirectToCheckout({
         sessionId : res.data.stripeSession.id,
       })
@@ -60,7 +64,8 @@ function Cart() {
             RESET CART
           </button>
         </>
-      ) : (
+      ) 
+      : (
         <span className="no-item">No items in the cart</span>
       )}
     </div>
