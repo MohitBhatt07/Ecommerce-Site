@@ -1,13 +1,14 @@
 .contact {
   padding: 5px 20px;
-  width: 100%;
   background-color: rgb(126, 33, 233);
   height: 70px;
   display: flex;
   gap: 20px;
   align-items: center;
+  gap: 10px;
+  
   justify-content: center;
-
+  
  
   .wrapper {   
     display: flex;
@@ -42,8 +43,43 @@
 
   .icons {
     flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     object-fit: contain;
     height: 60px;
     
   }
 }
+
+@media ((min-width : 501px ) and (max-width : 700px)) {
+  .contact {
+      
+    .wrapper{
+      span{
+        font-size: 12px;
+      }
+      .mail{
+        height: 80%;
+        input{
+          // width: 80%;  
+        }
+        // button{
+        //   width: 40px;
+        //   font-size: ;
+        // }
+      }
+    }
+  }
+}
+@media (max-width: 532px) {
+    .contact {
+      
+      .wrapper{
+        
+        span{
+          display: none;
+        }
+      }
+    }
+  }

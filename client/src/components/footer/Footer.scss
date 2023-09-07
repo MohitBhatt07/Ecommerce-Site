@@ -1,7 +1,8 @@
 .footer {
-  margin: 100px 200px 20px 100px;
+  margin: 100px 200px 20px 20px;
   .top {
     display: flex;
+    flex-wrap: wrap;
     gap: 50px;
 
     .item {
@@ -9,7 +10,7 @@
       display: flex;
       flex-direction: column;
       gap: 10px;
-      font-size: 14px;
+      font-size: 1rem;
     }
 
     h2 {
@@ -23,14 +24,15 @@
     }
   }
   .bottom {
+    margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    flex-wrap: wrap;
     .left{
       display: flex;
       align-items: center;
-
+      gap: 30px;
       .logo{
         
         color: rgb(186, 9, 221);
@@ -49,6 +51,33 @@
       img{
         height: 40px;
       }
+    }
+  }
+}
+
+
+@media (max-width: 500px) {
+  .footer {
+    gap: 20px;
+    .top{
+      .item{
+        min-width: 300px;
+      }
+    }
+    .bottom{
+      .left{
+        .copyright{
+          min-width :200px;
+        }
+
+      }
+      .right{
+        img{
+          height: 30px;
+        }
+      }
+      
+      
     }
   }
 }

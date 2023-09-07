@@ -15,7 +15,7 @@ function NavBar() {
   return (
     <nav className="navbar">
       <div className="wrapper">
-        <div className="left">
+        {/* <div className="left">
           <div className="item">
             <img src="/india.png" alt="" height={"15px"} width={"20px"} />
             <IoIosArrowDown />
@@ -34,12 +34,12 @@ function NavBar() {
             <Link className='link'  to={"/products/3"}>Children</Link>
           </div>
           <Link to={"/"} className="link">Accessories</Link>
-        </div>
-        <div className="center">
+  </div> */}
+        <div className="center"> 
           <Link className='link'  to={"/"}>Shop IT</Link>
         </div>
         <div className="right">
-          <div className="item">
+          {/* <div className="item">
             <Link  className='link' to={"/"}>HomePage</Link>
           </div>
           <div className="item">
@@ -50,7 +50,7 @@ function NavBar() {
           </div>
           <div className="item">
             <Link className='link'  to={"/"}></Link>
-          </div>
+          </div> */}
           <div className="icons">
             <HiSearch />
             <HiOutlineUserCircle />

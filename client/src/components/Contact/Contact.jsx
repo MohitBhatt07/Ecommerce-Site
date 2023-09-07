@@ -15,11 +15,12 @@ function Contact() {
           <button>Join us</button>
         </div>
       </div>
-      <div className="icons"></div>
+      <div className="icons">
         <BsFacebook/>
         <AiOutlineInstagram/>
         <BsTwitter/>
         <FaPinterest/>
+        </div>
     </div>
   )
 }

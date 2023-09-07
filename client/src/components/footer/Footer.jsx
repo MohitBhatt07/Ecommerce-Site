@@ -28,15 +28,7 @@ function Footer() {
             iste quas soluta.
           </span>
         </div>
-        <div className="item">
-          <h2>Contact</h2>
-          <span>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
-            odit quisquam sed corporis placeat perferendis eum quia repudiandae
-            magnam repellat cum unde, consequuntur ducimus, quod ipsam illum
-            iste quas soluta.
-          </span>
-        </div>
+        
       </div>
       <div className="bottom">
         <div className="left">
