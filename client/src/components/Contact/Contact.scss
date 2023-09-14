@@ -6,7 +6,6 @@
   gap: 20px;
   align-items: center;
   gap: 10px;
-  
   justify-content: center;
   
  
@@ -80,6 +79,14 @@
         span{
           display: none;
         }
+      }
+    }
+  }
+
+  @media (max-width : 387px) {
+    .mail{
+      input{
+        width: 80px;
       }
     }
   }
