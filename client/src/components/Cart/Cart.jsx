@@ -5,6 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { removeFromCart, resetCart } from "../../redux/cartReducer";
 import { makeRequest } from "../../makeReq";
 import { loadStripe } from "@stripe/stripe-js";
+import StripeCheckout from 'react-stripe-checkout';
+
 
 function Cart() {
   const data = useSelector((state) => state.cart.products);
@@ -63,6 +65,17 @@ function Cart() {
           >
             RESET CART
           </button>
+          {/* <div className="w-full mt-6 flex items-center justify-center">
+                <StripeCheckout
+                  stripeKey="pk_test_51NmqvsSDYEVWvpUb1vCxIp74QUbt2mIwvqnC1ufWnZAZq7ZrBMXcebyP87qsr51K2RgTqkm6Rxit3rVcplp3LJ1P0054Xl5yH4"
+                  name="Bazar Online Shopping"
+                  amount={totalPrice}
+                  label="Pay to bazar"
+                  description={`Your Payment amount is $${totalPrice}`}
+                  token={payment}
+                  email={"bhattmohit869@gmail.com"}
+                />
+              </div> */}
         </>
       ) 
       : (
